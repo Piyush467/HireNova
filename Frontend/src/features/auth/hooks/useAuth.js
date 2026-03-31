@@ -4,15 +4,19 @@ import { login, register, logout, getMe } from "../services/auth.api";
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
-  const { user, setUser, loading, setLoading } = context;
+  const { user, setUser, loading, setLoading, error, setError } = context;
 
   const handleLogin = async ({ email, password }) => {
     setLoading(true);
+    setError(null);
     try {
       const data = await login({ email, password });
       setUser(data.user);
+      return true;
     } catch (err) {
       console.log(err);
+      setError(err.response?.data?.message || "Login failed. Please check your credentials.");
+      return false;
     } finally {
       setLoading(false);
     }
@@ -20,11 +24,15 @@ export const useAuth = () => {
 
   const handleRegister = async ({ username, email, password }) => {
     setLoading(true);
+    setError(null);
     try {
       const data = await register({ username, email, password });
       setUser(data.user);
+      return true;
     } catch (err) {
-      console.log(err)
+      console.log(err);
+      setError(err.response?.data?.message || "Registration failed. Please try again.");
+      return false;
     } finally {
       setLoading(false);
     }
@@ -32,11 +40,15 @@ export const useAuth = () => {
 
   const handleLogout = async () => {
     setLoading(true);
+    setError(null);
     try {
-      const data = await logout();
+      await logout();
       setUser(null);
+      return true;
     } catch (err) {
-      console.log(err)
+      console.log(err);
+      setError("Logout failed.");
+      return false;
     } finally {
       setLoading(false);
     }
@@ -48,7 +60,7 @@ export const useAuth = () => {
         const data = await getMe();
         setUser(data.user);
       } catch (err) {
-        console.log(err)
+        console.log("Not logged in");
       } finally {
         setLoading(false);
       }
@@ -57,5 +69,6 @@ export const useAuth = () => {
     getAndSetUser();
   }, []);
 
-  return { user, loading, handleRegister, handleLogin, handleLogout };
+  return { user, loading, error, handleRegister, handleLogin, handleLogout };
 };
+

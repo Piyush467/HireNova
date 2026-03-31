@@ -1,16 +1,47 @@
-# React + Vite
+# 🎨 HireNova Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+HireNova's interactive, React-powered frontend built with [Vite](https://vitejs.dev/) and Styled with [Sass](https://sass-lang.com/).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- **🌈 Modern UI/UX**: Intuitive design for seamless interview report generation.
+- **🔐 Auth Integration**: Dedicated Login, Registration, and Secure Session hooks.
+- **📄 Dashboard**: Real-time access to interview history and reports.
+- **📁 File Uploads**: PDF resume upload support via Axios.
+- **🗺️ Navigation**: Client-side routing with React Router 7.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+2. **Environment Configuration**:
+   Create a `.env` file for Vite:
+   ```env
+   VITE_API_URL=http://localhost:3000
+   ```
+
+3. **Run in Development**:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 📂 Frontend Structure
+
+- `src/features/auth/`: Components and hooks for user identity.
+- `src/features/dashboard/`: Main application logic and user data views.
+- `src/hooks/`: Custom state and data management.
+- `src/services/`: Abstracted API calls using Axios.
+- `src/assets/`: Styles (SCSS) and images.
+
+---
+
+*For full project documentation, refer to the [Root README](../README.md).*
