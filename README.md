@@ -146,6 +146,4 @@ This project is licensed under the [ISC License](LICENSE).
 
 Contributions are welcome! Please feel free to submit a Pull Request or open an issue for any bugs or feature requests.
 
----
 
-*Built with ❤️ by the HireNova Team*
