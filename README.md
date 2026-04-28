@@ -12,14 +12,14 @@
   <img src="https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Gemini" />
 </p>
 
-# 🚀 HireNova: AI-Powered Interview Excellence
+# HireNova: AI-Powered Interview Excellence
 
 
 HireNova is a cutting-edge, AI-driven platform designed to streamline the recruitment process. By leveraging the power of Google's Gemini AI, HireNova provides personalized interview reports, resume analysis, and job description mapping, helping both candidates and recruiters achieve better outcomes.
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 
 - **🧠 AI-Driven Interview Analysis**: Generate comprehensive interview reports based on user self-descriptions, uploaded resumes, and specific job descriptions.
 - **📄 Precise Resume Parsing**: Automatically extract and analyze content from PDF resumes using advanced parsing techniques.

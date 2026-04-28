@@ -1,4 +1,4 @@
-# 🎨 HireNova Frontend
+#  HireNova Frontend
 
 HireNova's interactive, React-powered frontend built with [Vite](https://vitejs.dev/) and Styled with [Sass](https://sass-lang.com/).
 
