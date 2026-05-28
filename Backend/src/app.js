@@ -8,7 +8,7 @@ app.use(express.json()); // middleware that allow reading of data from req.body(
 
 app.use(cookieParser())
 app.use(cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: "https://hire-nova-ten.vercel.app/",
     credentials: true
 }))
 

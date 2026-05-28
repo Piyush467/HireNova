@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://hirenova-3idt.onrender.com",
   withCredentials: true,
 });
 
